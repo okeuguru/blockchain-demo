@@ -9,14 +9,14 @@ describe('Blockchain', () => {
     });
 
     it('start with genesis block', () => {
-        expect(bc.chain[0].toEa)
+        expect(bc.chain[0].toEaqual(Block.genesis))
     });
 
     it('adds a new block', () => {
         const data = 'foo';
         bc.addBlock(data);
 
-        expect(bc.chain[bc.chain.length-1].data).toEqual(data)
+        expect(bc.chain[bc.chain.length - 1].data).toEqual(data)
     });
 
 });
